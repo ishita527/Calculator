@@ -1,0 +1,40 @@
+.main{
+    margin-left:500px;
+    margin-top:10px;
+}
+button {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    background-color: rgb(196 98 98 / 61%);
+    font-family: cursive;
+    font-size: 30px;
+    height: 74px;
+    width: 74px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+h1 {
+    margin-left: 111px;
+    font-family: cursive;
+    color: #062019;
+    font-weight: 400;
+    font-size: 38px;
+}
+
+input {
+    margin-left: 10px;
+    height: 37px;
+    border-width: 7px;
+    border-color: #e9bed8;
+    border-radius: 23px;
+    width: 359px;
+    text-align: right;
+    font-size: 30px;
+    font-family: cursive;
+    padding-bottom: 0px;
+    padding-top: 57px;
+    color: #530c44
+}
+
+ 

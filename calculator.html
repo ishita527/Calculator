@@ -1,0 +1,46 @@
+<!doctype html> 
+<html lang="en-US">
+  <head>
+         <title>Calculator</title>
+         <meta charset="utf-8"/>
+         <script src="function123.js" defer></script>
+         <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+     <div class="main">
+         <h1> Calculator</h1>
+         <input id="input1" type="text" />
+         <p #result></p>
+         <div>
+              <button onclick="erase()">C</button>
+              <button>()</button>
+              <button onclick="inputBoxData('%')">%</button>
+              <button onclick="inputBoxData('+')">+</button>
+         </div>
+         <div>
+              <button onclick="inputBoxData('/')">/</button>
+              <button onclick="inputBoxData('*')">x</button>
+              <button onclick="inputBoxData('-')">-</button>
+              <button onclick="showResult()">=</button>
+         </div>
+         <div>
+          <button onclick="inputBoxData('1')">1</button>
+          <button onclick="inputBoxData('2')">2</button>
+          <button onclick="inputBoxData('3')">3</button>
+          <button>sqrt</button>
+         </div>
+         <div>
+          <button onclick="inputBoxData('4')">4</button>
+          <button onclick="inputBoxData('5')">5</button>
+          <button onclick="inputBoxData('6')">6</button>
+          <button>x^2</button>
+         </div>
+         <div>
+          <button onclick="inputBoxData('7')">7</button>
+          <button onclick="inputBoxData('8')">8</button>
+          <button onclick="inputBoxData('9')">9</button>
+          <button onclick="inputBoxData('0')">0</button>
+         </div>
+     </div>
+  </body>
+</html>
