@@ -1,5 +1,5 @@
 .main{
-    margin-left:500px;
+    text-align: center;
     margin-top:10px;
 }
 button {
@@ -15,7 +15,6 @@ button {
     border-radius: 5px;
 }
 h1 {
-    margin-left: 111px;
     font-family: cursive;
     color: #062019;
     font-weight: 400;

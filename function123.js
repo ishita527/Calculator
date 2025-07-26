@@ -1,8 +1,6 @@
-let values = []
 function calculate(value){
-  values = [];
-  parseData(value);
-  console.log(values);
+  let values = [];
+  values = parseData(value);
   if(!values)
     return;
   let res = values[0];
@@ -27,8 +25,10 @@ function calculate(value){
   }
   return res;
 }
-  
+
+/*Takes string from input section of calculator and parses it into array*/
 function parseData(value){
+ let values = []
  const len = value.length;
  let i = 0;
  let str = '';
@@ -65,6 +65,7 @@ function parseData(value){
     i ++;
   }
   values.push(parseInt(str));
+  return values;
  }
 
 
@@ -75,36 +76,35 @@ function digit(data){
     return false;
 }
 
+const input1 = document.getElementById("input1");
+
 function erase(){
-    const input1 = document.getElementById("input1");
     input1.value=''
 }
 
-function inputBoxData(userText){
-    const input1 = document.getElementById("input1");
-    input1.value += userText;
+function displayInput(userInput){
+    if(userInput === 'sqrt'){
+    }
+    else{
+      input1.value += userInput;
+    }
+      
 }
 
 function showResult(){
-    const input1 = document.getElementById("input1");
     input1.value = calculate(input1.value)
 }
 
-function add(){
+function checkLastNumber(){
+  const len = input1.value.length;
+  let lastNumber = '';
+  let i = len - 1;
+  while (i >= 0 && !isNaN(input1.value[i])){
+    lastNumber += input1.value[i];
+    i --;
+  }
 
+  lastNumber = lastNumber.split('').reverse().join('');
+  return lastNumber;
 }
-
-function subtract(){
-
-}
-
-function multiply(){
-
-}
-
-function divide(){
-
-}
-
-erase();
 
