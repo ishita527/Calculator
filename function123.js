@@ -33,13 +33,17 @@ function parseData(value){
  let i = 0;
  let str = '';
  while (i < len){
-   if(digit(value[i])){
+   if(value[i] === ' '){
+      i++;
+      continue;
+   }
+   else if(digit(value[i])){
       str += value[i];
       i++;
       continue;
     }
 
-    else if(str !== ''){
+   else if(str !== ''){
        switch(value[i]){
         case '+':
             values.push(parseInt(str));
