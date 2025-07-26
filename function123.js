@@ -106,6 +106,10 @@ function showResult(){
     input1.value = calculate(input1.value)
 }
 
+function removeLastCharacter(){
+  input1.value = input1.value.slice(0, -1);
+}
+
 function checkLastNumber(){
   const len = input1.value.length;
   let lastNumber = '';
