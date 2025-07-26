@@ -39,7 +39,7 @@ function parseData(value){
       continue;
     }
 
-    else{
+    else if(str !== ''){
        switch(value[i]){
         case '+':
             values.push(parseInt(str));
@@ -61,7 +61,10 @@ function parseData(value){
             values.push('/');
             str = '';
             break;
-    }}   
+    }}
+    else if(value[i] === '-' && str === ''){
+      str += value[i];
+    }   
     i ++;
   }
   values.push(parseInt(str));
