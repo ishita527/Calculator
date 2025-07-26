@@ -65,6 +65,10 @@ function parseData(value){
             values.push('/');
             str = '';
             break;
+        case "%":
+            values.push(parseInt(str)/100);
+            // values.push('%');
+            break;
     }}
     else if(value[i] === '-' && str === ''){
       str += value[i];
@@ -114,4 +118,6 @@ function checkLastNumber(){
   lastNumber = lastNumber.split('').reverse().join('');
   return lastNumber;
 }
+
+
 
