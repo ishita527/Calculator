@@ -1,48 +1,27 @@
-function calculate(value){
-  let values = [];
-  values = parseData(value);
-  if(!values)
-    return;
-  let res = values[0];
-  let len = values.length;
-  let i = 1;
-  while(i < len){
-    switch(values[i]){
-      case '+':
-          res += values[i+1];
-          break;
-      case '-':
-          res -= values[i+1];
-          break;
-      case '*':
-          res *= values[i+1];
-          break;
-      case '/':
-          res /= values[i+1];
-          break;
-  }   
-    i += 2;
-  }
-  return res;
-}
+const input1 = document.getElementById("input1");
 
 /*Takes string from input section of calculator and parses it into array*/
 function parseData(value){
- let values = []
+ 
+ let values = [] //array to put parsed values
  const len = value.length;
  let i = 0;
  let str = '';
+
+ //checking one by one if the character is numeric, or operator
  while (i < len){
+  //checking for empty spaces to skip
    if(value[i] === ' '){
       i++;
       continue;
    }
-   else if(digit(value[i])){
+  //checking if the character is numerical
+   else if(!isNaN(value[i])){
       str += value[i];
       i++;
       continue;
     }
-
+   //checking for operator
    else if(str !== ''){
        switch(value[i]){
         case '+':
@@ -70,24 +49,43 @@ function parseData(value){
             // values.push('%');
             break;
     }}
+    //checking if expression starts with minus
     else if(value[i] === '-' && str === ''){
       str += value[i];
     }   
-    i ++;
+    i++;
   }
   values.push(parseInt(str));
   return values;
  }
-
-
-function digit(data){
-  if (parseInt(data) >=0 && parseInt(data) <=9)
-    return true;
-  else
-    return false;
+/* Calculates the value of expression; takes parsed array as an input*/ 
+function calculate(value){
+  let values = [];
+  values = parseData(value);
+  if(!values)
+    return;
+  let res = values[0];
+  let len = values.length;
+  let i = 1;
+  while(i < len){
+    switch(values[i]){
+      case '+':
+          res += values[i+1];
+          break;
+      case '-':
+          res -= values[i+1];
+          break;
+      case '*':
+          res *= values[i+1];
+          break;
+      case '/':
+          res /= values[i+1];
+          break;
+  }   
+    i += 2;
+  }
+  return res;
 }
-
-const input1 = document.getElementById("input1");
 
 function erase(){
     input1.value=''

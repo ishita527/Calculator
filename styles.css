@@ -1,3 +1,4 @@
+
 .main{
     text-align: center;
     margin-top:10px;
@@ -21,6 +22,13 @@ h1 {
     font-size: 38px;
 }
 
+h2{
+    font-family: cursive;
+    color:#062019;
+    font-size: 38px;
+    font-weight: 400;
+}
+
 input {
     margin-left: 10px;
     height: 37px;
@@ -35,5 +43,7 @@ input {
     padding-top: 57px;
     color: #530c44
 }
+
+
 
  
