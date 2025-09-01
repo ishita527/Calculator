@@ -1,9 +1,22 @@
 
 .main{
     text-align: center;
-    margin-top:10px;
+    margin-top: 10px;
+    display: flex;
+    max-height: 100vh;
 }
-button {
+.calculator-ui{
+    flex:4;
+    align-self: center;
+}
+
+.history-ui{
+    flex:1;
+    border-left: 1px solid black;
+    overflow-y: scroll;
+    
+}
+.calculator-ui button {
     color: rgb(255, 255, 255);
     margin: 10px;
     background-color: rgb(196 98 98 / 61%);
@@ -38,12 +51,24 @@ input {
     width: 359px;
     text-align: right;
     font-size: 30px;
-    font-family: cursive;
+    font-family: cursive, sans-serif;
     padding-bottom: 0px;
     padding-top: 57px;
-    color: #530c44
+    color: #530c44;
 }
 
+p{
+    cursor: pointer;
+    font-family: cursive;
+}
+
+.history-ui button{
+    border-radius: 5px;
+    font-size: 17px;
+    background: bottom;
+    border: 3px solid #7a7c7c;
+    cursor: pointer;
+}
 
 
  

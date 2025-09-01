@@ -1,45 +1,51 @@
-<!doctype html> 
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
-         <title>Calculator</title>
-         <meta charset="utf-8"/>
-         <script src="function123.js" defer></script>
-         <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+    <meta charset="utf-8" />
+    <script src="function123.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-     <div class="main">
-         <h1> Calculator</h1>
-         <input id="input1" type="text" />
-         <div>
-              <button onclick="erase()">C</button>
-              <button onclick="removeLastCharacter()">&#9003;</button>
-              <button onclick="displayInput('%')">%</button>
-              <button onclick="displayInput('+')">+</button>
-         </div>
-         <div>
-              <button onclick="displayInput('/')">/</button>
-              <button onclick="displayInput('*')">x</button>
-              <button onclick="displayInput('-')">-</button>
-              <button onclick="showResult()">=</button>
-         </div>
-         <div>
+    <div class="main">
+      <div class="calculator-ui">
+        <h1>Calculator</h1>
+        <input id="input1" type="text" />
+        <div>
+          <button onclick="erase()">C</button>
+          <button onclick="removeLastCharacter()">&#9003;</button>
+          <button onclick="displayInput('%')">%</button>
+          <button onclick="displayInput('+')">+</button>
+        </div>
+        <div>
+          <button onclick="displayInput('/')">/</button>
+          <button onclick="displayInput('*')">x</button>
+          <button onclick="displayInput('-')">-</button>
+          <button onclick="showResult()">=</button>
+        </div>
+        <div>
           <button onclick="displayInput('1')">1</button>
           <button onclick="displayInput('2')">2</button>
           <button onclick="displayInput('3')">3</button>
           <button onclick="displayInput('sqrt')">&radic;x</button>
-         </div>
-         <div>
+        </div>
+        <div>
           <button onclick="displayInput('4')">4</button>
           <button onclick="displayInput('5')">5</button>
           <button onclick="displayInput('6')">6</button>
           <button onclick="displayInput('square')">x<sup>2</sup></button>
-         </div>
-         <div>
+        </div>
+        <div>
           <button onclick="displayInput('7')">7</button>
           <button onclick="displayInput('8')">8</button>
           <button onclick="displayInput('9')">9</button>
           <button onclick="displayInput('0')">0</button>
-         </div>
-     </div>
+        </div>
+      </div>
+      <div class="history-ui">
+          <h2>History</h2>
+          <button onclick ="eraseHistory()">Reset</button>
+      </div>
+    </div>
   </body>
 </html>
