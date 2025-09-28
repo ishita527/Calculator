@@ -4,7 +4,7 @@
   max-height: 100vh;
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .calculator-ui {
     flex: 4;
     align-self: center;
@@ -17,11 +17,38 @@
   }
 
   .main {
-  text-align: center;
-  margin-top: 10px;
-  display: flex;
-  max-height: 100vh;
-}
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    max-height: 100vh;
+  }
+
+  .main .calculator-ui button {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    background-color: rgb(196 98 98 / 61%);
+    font-family: cursive;
+    font-size: 30px;
+    height: 74px;
+    width: 74px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .main input {
+    margin-left: 10px;
+    height: 37px;
+    border-width: 7px;
+    border-color: #e9bed8;
+    border-radius: 23px;
+    width: 359px;
+    text-align: right;
+    font-size: 30px;
+    font-family: cursive, sans-serif;
+    padding-bottom: 0px;
+    padding-top: 57px;
+    color: #530c44;
+  }
 }
 
 .calculator-ui button {
@@ -29,9 +56,9 @@
   margin: 10px;
   background-color: rgb(196 98 98 / 61%);
   font-family: cursive;
-  font-size: 30px;
-  height: 74px;
-  width: 74px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
@@ -56,7 +83,7 @@ input {
   border-width: 7px;
   border-color: #e9bed8;
   border-radius: 23px;
-  width: 359px;
+  width: 260px;
   text-align: right;
   font-size: 30px;
   font-family: cursive, sans-serif;
