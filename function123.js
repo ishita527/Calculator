@@ -1,5 +1,22 @@
 /*Takes reference of input section of calculator*/
 const input1 = document.getElementById("input1");
+input1.focus();
+
+const allowedChars = /[0-9+\-*/%]/;
+//const patterns = /++/
+input1.oninput = (ev) => {
+  
+  if(!ev.data){
+    return;
+  }
+  if(!allowedChars.test(ev.data)){
+    input1.value = input1.value.slice(0, -1);
+  }
+
+  // if(ev.data === '='){
+  //   showResult();
+  // }
+}
 
 /*Takes whole string from input section of calculator and parses it into array*/
 function parseData(value) {
@@ -20,11 +37,11 @@ function parseData(value) {
       str += value[i];
       i++;
       continue;
-    } 
+    }
     else if (str !== "" && value[i] !== "\u221A") {
-    /*Checking for operator-- 
-    1. Since the character is not a number and not a whitspace,it must be an operator
-    2. If str is not empty, it means it has numerical value in it, so push it to array and then push the operator*/
+      /*Checking for operator-- 
+      1. Since the character is not a number and not a whitspace,it must be an operator
+      2. If str is not empty, it means it has numerical value in it, so push it to array and then push the operator*/
       switch (value[i]) {
         case "+":
           values.push(str);
@@ -55,10 +72,10 @@ function parseData(value) {
     //checking if expression starts with minus
     else if (value[i] === "-" && str === "") {
       str += value[i];
-    } 
+    }
     else if (value[i] === "\u221A") {
       console.log("sqrt found");
-      if(str  !== ""){
+      if (str !== "") {
         values.push(str);
         values.push("*");
         str = "";
@@ -69,10 +86,15 @@ function parseData(value) {
       }
       str = Math.sqrt(parseInt(str));
       console.log(str);
-     // i--;
+      // i--;
     }
+
+    else
+      return;
+
     i++;
   }
+  
   values.push(parseInt(str));
   return values;
 }
@@ -99,7 +121,7 @@ function calculate(value) {
       case "/":
         res /= parseInt(values[i + 1]);
         break;
-      
+
     }
     i += 2;
   }
@@ -120,8 +142,12 @@ function displayInput(userInput) {
 
 function showResult() {
   const cal_value = calculate(input1.value);
-  document.getElementsByClassName("history-ui")[0].innerHTML += `
+  if (cal_value) {
+    document.getElementsByClassName("history-ui")[0].innerHTML += `
           <p>${input1.value}</p>`;
+
+  }
+
   input1.value = cal_value;
 }
 

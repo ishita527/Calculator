@@ -1,74 +1,79 @@
-
-.main{
-    text-align: center;
-    margin-top: 10px;
-    display: flex;
-    max-height: 100vh;
+.main {
+  text-align: center;
+  margin-top: 10px;
+  max-height: 100vh;
 }
-.calculator-ui{
-    flex:4;
+
+@media (width >= 600px) {
+  .calculator-ui {
+    flex: 4;
     align-self: center;
-}
+  }
 
-.history-ui{
-    flex:1;
+  .history-ui {
+    flex: 1;
     border-left: 1px solid black;
     overflow-y: scroll;
-    
+  }
+
+  .main {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  max-height: 100vh;
 }
-.calculator-ui button {
-    color: rgb(255, 255, 255);
-    margin: 10px;
-    background-color: rgb(196 98 98 / 61%);
-    font-family: cursive;
-    font-size: 30px;
-    height: 74px;
-    width: 74px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-}
-h1 {
-    font-family: cursive;
-    color: #062019;
-    font-weight: 400;
-    font-size: 38px;
 }
 
-h2{
-    font-family: cursive;
-    color:#062019;
-    font-size: 38px;
-    font-weight: 400;
+.calculator-ui button {
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  background-color: rgb(196 98 98 / 61%);
+  font-family: cursive;
+  font-size: 30px;
+  height: 74px;
+  width: 74px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+h1 {
+  font-family: cursive;
+  color: #062019;
+  font-weight: 400;
+  font-size: 38px;
+}
+
+h2 {
+  font-family: cursive;
+  color: #062019;
+  font-size: 38px;
+  font-weight: 400;
 }
 
 input {
-    margin-left: 10px;
-    height: 37px;
-    border-width: 7px;
-    border-color: #e9bed8;
-    border-radius: 23px;
-    width: 359px;
-    text-align: right;
-    font-size: 30px;
-    font-family: cursive, sans-serif;
-    padding-bottom: 0px;
-    padding-top: 57px;
-    color: #530c44;
+  margin-left: 10px;
+  height: 37px;
+  border-width: 7px;
+  border-color: #e9bed8;
+  border-radius: 23px;
+  width: 359px;
+  text-align: right;
+  font-size: 30px;
+  font-family: cursive, sans-serif;
+  padding-bottom: 0px;
+  padding-top: 57px;
+  color: #530c44;
 }
 
-p{
-    cursor: pointer;
-    font-family: cursive;
+p {
+  cursor: pointer;
+  font-family: cursive;
 }
 
-.history-ui button{
-    border-radius: 5px;
-    font-size: 17px;
-    background: bottom;
-    border: 3px solid #7a7c7c;
-    cursor: pointer;
+.history-ui button {
+  border-radius: 5px;
+  font-size: 17px;
+  background: bottom;
+  border: 3px solid #7a7c7c;
+  cursor: pointer;
 }
-
-
- 
