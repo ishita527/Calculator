@@ -56,9 +56,9 @@
   margin: 10px;
   background-color: rgb(196 98 98 / 61%);
   font-family: cursive;
-  font-size: 20px;
-  height: 50px;
-  width: 50px;
+  font-size: 30px;
+  height: 70px;
+  width: 70px;
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
@@ -83,7 +83,7 @@ input {
   border-width: 7px;
   border-color: #e9bed8;
   border-radius: 23px;
-  width: 260px;
+  width: 360px;
   text-align: right;
   font-size: 30px;
   font-family: cursive, sans-serif;
