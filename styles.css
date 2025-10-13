@@ -4,61 +4,14 @@
   max-height: 100vh;
 }
 
-@media (min-width: 600px) {
-  .calculator-ui {
-    flex: 4;
-    align-self: center;
-  }
-
-  .history-ui {
-    flex: 1;
-    border-left: 1px solid black;
-    overflow-y: scroll;
-  }
-
-  .main {
-    text-align: center;
-    margin-top: 10px;
-    display: flex;
-    max-height: 100vh;
-  }
-
-  .main .calculator-ui button {
-    color: rgb(255, 255, 255);
-    margin: 10px;
-    background-color: rgb(196 98 98 / 61%);
-    font-family: cursive;
-    font-size: 30px;
-    height: 74px;
-    width: 74px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .main input {
-    margin-left: 10px;
-    height: 37px;
-    border-width: 7px;
-    border-color: #e9bed8;
-    border-radius: 23px;
-    width: 359px;
-    text-align: right;
-    font-size: 30px;
-    font-family: cursive, sans-serif;
-    padding-bottom: 0px;
-    padding-top: 57px;
-    color: #530c44;
-  }
-}
-
 .calculator-ui button {
   color: rgb(255, 255, 255);
   margin: 10px;
   background-color: rgb(196 98 98 / 61%);
   font-family: cursive;
-  font-size: 30px;
-  height: 70px;
-  width: 70px;
+  font-size: 20px;
+  height: 45px;
+  width: 45px;
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
@@ -83,7 +36,7 @@ input {
   border-width: 7px;
   border-color: #e9bed8;
   border-radius: 23px;
-  width: 360px;
+  width: 250px;
   text-align: right;
   font-size: 30px;
   font-family: cursive, sans-serif;
@@ -103,4 +56,57 @@ p {
   background: bottom;
   border: 3px solid #7a7c7c;
   cursor: pointer;
+}
+
+@media (min-width: 330px){
+  input{
+    width: 274px;
+  }
+
+  .calculator-ui button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 420px){
+  .calculator-ui button{
+    width: 66px;
+    height: 66px;
+    font-size: 30px;
+  }
+
+  input{
+    width: 360px;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .calculator-ui {
+    flex: 4;
+    align-self: center;
+  }
+
+  .history-ui {
+    flex: 1;
+    border-left: 1px solid black;
+    overflow-y: scroll;
+  }
+
+  .main {
+    display: flex;
+  }
+
+  .main .calculator-ui button {
+    height: 74px;
+    width: 74px;
+  }
+  .main input {
+    margin-left: 10px;
+    height: 37px;
+    width: 359px;
+    font-size: 30px;
+  }
 }

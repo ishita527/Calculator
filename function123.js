@@ -12,10 +12,6 @@ input1.oninput = (ev) => {
   if(!allowedChars.test(ev.data)){
     input1.value = input1.value.slice(0, -1);
   }
-
-  // if(ev.data === '='){
-  //   showResult();
-  // }
 }
 
 /*Takes whole string from input section of calculator and parses it into array*/
@@ -27,13 +23,9 @@ function parseData(value) {
 
   //checking one by one if the character is numeric, or operator
   while (i < len) {
-    //checking for empty spaces to skip
-    if (value[i] === " ") {
-      i++;
-      continue;
-    }
+
     //checking if the character is numerical
-    else if (!isNaN(value[i])) {
+     if (!isNaN(value[i])) {
       str += value[i];
       i++;
       continue;
@@ -73,6 +65,7 @@ function parseData(value) {
     else if (value[i] === "-" && str === "") {
       str += value[i];
     }
+    //checking for sqrt symbol
     else if (value[i] === "\u221A") {
       console.log("sqrt found");
       if (str !== "") {
@@ -85,7 +78,6 @@ function parseData(value) {
         i++;
       }
       str = Math.sqrt(parseInt(str));
-      console.log(str);
       // i--;
     }
 
